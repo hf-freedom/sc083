@@ -1,0 +1,25 @@
+server:
+  port: 8004
+
+spring:
+  application:
+    name: vaccine-system-backend
+  
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+    time-zone: GMT+8
+    serialization:
+      write-dates-as-timestamps: false
+
+logging:
+  level:
+    com.vaccine: DEBUG
+    org.springframework: INFO
+
+# 自定义配置
+vaccine:
+  appointment:
+    timeout-minutes: 30
+    max-capacity-per-time-slot: 20
+  observation:
+    minutes: 30
